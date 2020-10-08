@@ -1,15 +1,51 @@
-import React from "react"
+import React, { useState } from "react"
+import { useDispatch } from "react-redux"
+import { deleteTodo, updateTodo } from "../redux/actions"
 
-function TodoItem() {
+function TodoItem({ todo }) {
+  const [editable, setEditable] = useState(false)
+  const [name, setName] = useState(todo.name)
+  let dispatch = useDispatch()
   return (
     <div>
       <div className="row mx-2 align-items-center">
-        <div>#1</div>
-        <div className="col">
-          <h4>Todo title</h4>
+        <div className="col-7">
+          {editable ? (
+            <input
+              type="text"
+              className="form-control"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+            />
+          ) : (
+            <h4>{todo.name}</h4>
+          )}
         </div>
-        <button className="btn btn-primary m-2">Edit</button>
-        <button className="btn btn-danger m-2">Delete</button>
+        <div className="col-3">
+          <button
+            onClick={() => {
+              dispatch(
+                updateTodo({
+                  ...todo,
+                  name: name,
+                })
+              )
+              if (editable) {
+                setName(todo.name)
+              }
+              setEditable(!editable)
+            }}
+            className="btn btn-primary m-2"
+          >
+            {editable ? "Update" : "Edit"}
+          </button>
+          <button
+            onClick={() => dispatch(deleteTodo(todo.id))}
+            className="btn btn-danger m-2"
+          >
+            Delete
+          </button>
+        </div>
       </div>
     </div>
   )

@@ -8,7 +8,7 @@ function TodoList() {
   return (
     <div className="my-4">
       {todos.map((todo) => {
-        return <TodoItem key={todo.id} />
+        return <TodoItem key={todo.id} todo={todo} />
       })}
     </div>
   )
