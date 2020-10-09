@@ -1,14 +1,7 @@
 export let todos = [
   {
     id: 1,
-    name: "One",
-  },
-  {
-    id: 2,
-    name: "Two",
-  },
-  {
-    id: 3,
-    name: "Three",
+    name:
+      "Hola, soy juan pablo y esto es un parrafo un oco largo para poder probar el espaciado que debería haber en el casillero de tarea",
   },
 ]

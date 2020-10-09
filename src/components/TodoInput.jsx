@@ -8,12 +8,13 @@ function TodoInput() {
   let dispatch = useDispatch()
   return (
     <div>
-      <h3>TodoInput</h3>
+      <h1>My Todo List</h1>
       <div className="row m-2">
         <input
           onChange={(e) => setName(e.target.value)}
           value={name}
           type="text"
+          placeholder="Insert your task here :)"
           className="col form-control"
         />
         <button
