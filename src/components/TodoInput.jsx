@@ -7,15 +7,17 @@ function TodoInput() {
   let [name, setName] = useState()
   let dispatch = useDispatch()
   return (
-    <div>
-      <h1>My Todo List</h1>
-      <div className="row m-2">
+    <div className='container-fluid'>
+      <div id='title' className="row justify-content-center p-3">
+        <h1>My to do List</h1>
+      </div>
+      <div id='input__box' className="row justify-content-center">
         <input
           onChange={(e) => setName(e.target.value)}
           value={name}
           type="text"
           placeholder="Insert your task here :)"
-          className="col form-control"
+          className="col form-control "
         />
         <button
           onClick={() => {

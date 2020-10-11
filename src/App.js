@@ -6,7 +6,7 @@ import "bootstrap/dist/css/bootstrap.css"
 
 function App() {
   return (
-    <div className="App m-5">
+    <div className="App container-fluid mt-5">
       <TodoInput />
       <TodoList />
     </div>
