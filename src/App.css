@@ -1,7 +1,50 @@
 .App {
   text-align: center;
+  height: 100vh;
+  background: rgb(46,9,121);
+  background: linear-gradient(0deg, rgba(46,9,121,1) 30%, rgba(99,6,169,1) 53%, rgba(192,0,255,1) 88%);
+}
+h1 {
+  font-family: 'Lobster', cursive;
+  color: rgb(5, 4, 41);
 }
 
-#title {
-  background-color: brown;
+p {
+  font-family: 'Gothic A1', sans-serif;
+  color: rgb(5, 4, 41);
+}
+
+.item, .item input, #input input, #input input::placeholder {
+  font-family: 'Gothic A1', sans-serif;
+  text-align: center;
+  font-weight: bold;
+  color: rgb(5, 4, 41);
+}
+
+.item, #input input {
+  background: rgb(167,165,167);
+  background: linear-gradient(0deg, rgba(167,165,167,1) 0%, rgba(255,255,255,1) 100%);
+}
+
+.btn-primary, .btn-danger {
+  font-family: 'Gothic A1', sans-serif;
+  font-weight: bold;
+  color: rgb(5, 4, 41);
+  border: none;
+}
+
+.btn-primary {
+  background-color: lime;
+}
+
+.btn-primary:hover, .btn-primary:focus {
+  background-color: rgb(2, 88, 2);
+}
+
+.btn-danger {
+  background-color: magenta;
+}
+
+.btn-danger:hover {
+  background-color: rgb(83, 1, 83);
 }

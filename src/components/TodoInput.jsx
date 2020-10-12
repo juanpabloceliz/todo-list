@@ -8,10 +8,11 @@ function TodoInput() {
   let dispatch = useDispatch()
   return (
     <div className='container-fluid'>
-      <div id='title' className="row justify-content-center p-3">
+      <div id='title' className="row rounded-top justify-content-center py-3">
         <h1>My to do List</h1>
       </div>
-      <div id='input__box' className="row justify-content-center">
+      <div id='input' className="row rounded-bottom justify-content-center py-3">
+        <div className="col-6 p">
         <input
           onChange={(e) => setName(e.target.value)}
           value={name}
@@ -19,6 +20,8 @@ function TodoInput() {
           placeholder="Insert your task here :)"
           className="col form-control "
         />
+        </div>
+        <div className='col-2 p-0'>
         <button
           onClick={() => {
             dispatch(
@@ -33,6 +36,7 @@ function TodoInput() {
         >
           Add
         </button>
+        </div>
       </div>
     </div>
   )

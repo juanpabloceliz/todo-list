@@ -8,8 +8,8 @@ function TodoItem({ todo }) {
   let dispatch = useDispatch()
   return (
     <div>
-      <div className="row mx-2 align-items-center">
-        <div className="col-7">
+      <div className="row m-3 align-items-center justify-content-center rounded">
+        <div className="item col-5 rounded py-4 text-center text-justify">
           {editable ? (
             <input
               type="text"
@@ -18,7 +18,7 @@ function TodoItem({ todo }) {
               onChange={(e) => setName(e.target.value)}
             />
           ) : (
-            <h4>{todo.name}</h4>
+            <p>{todo.name}</p>
           )}
         </div>
         <div className="col-3">
