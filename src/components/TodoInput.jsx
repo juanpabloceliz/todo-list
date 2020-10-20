@@ -17,7 +17,7 @@ function TodoInput() {
           onChange={(e) => setName(e.target.value)}
           value={name}
           type="text"
-          placeholder="Insert your task here :)"
+          placeholder="Insert your task here"
           className="col form-control "
         />
         </div>

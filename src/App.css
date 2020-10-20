@@ -1,50 +1,62 @@
 .App {
+  font-family: "Hind Guntur", sans-serif;
   text-align: center;
   min-height: 100vh;
-  background: rgb(46,9,121);
-  background: linear-gradient(0deg, rgba(46,9,121,1) 30%, rgba(99,6,169,1) 53%, rgba(192,0,255,1) 88%);
+  background: linear-gradient(
+    0deg,
+    rgb(200, 200, 200) 30%,
+    rgb(240, 240, 240) 53%,
+    rgb(255, 255, 255) 88%
+  );
 }
 h1 {
-  font-family: 'Lobster', cursive;
-  color: rgb(5, 4, 41);
+  font-weight: 600;
+  color: rgb(5, 5, 40);
 }
 
 p {
-  font-family: 'Gothic A1', sans-serif;
-  color: rgb(5, 4, 41);
+  color: rgb(5, 5, 40);
 }
 
-.item, .item input, #input input, #input input::placeholder {
-  font-family: 'Gothic A1', sans-serif;
+.item,
+.item input,
+#input input,
+#input input::placeholder {
   text-align: center;
-  font-weight: bold;
-  color: rgb(5, 4, 41);
+  color: rgb(5, 5, 40);
 }
 
-.item, #input input {
-  background: rgb(167,165,167);
-  background: linear-gradient(0deg, rgba(167,165,167,1) 0%, rgba(255,255,255,1) 100%);
+.item {
+  background: rgb(228, 228, 228);
+  box-shadow: 0 0 10px 0 rgb(156, 156, 156);
 }
 
-.btn-primary, .btn-danger {
-  font-family: 'Gothic A1', sans-serif;
+#input input {
+  background: rgb(228, 228, 228);
+}
+
+.btn-primary,
+.btn-danger {
   font-weight: bold;
-  color: rgb(5, 4, 41);
+  color: rgb(5, 5, 40);
   border: none;
 }
 
 .btn-primary {
-  background-color: lime;
+  background-color: limegreen;
+  color: whitesmoke;
 }
 
-.btn-primary:hover, .btn-primary:focus {
-  background-color: rgb(2, 88, 2);
+.btn-primary:hover,
+.btn-primary:focus {
+  background-color: green;
 }
 
 .btn-danger {
-  background-color: magenta;
+  color: whitesmoke;
+  background-color: red;
 }
 
 .btn-danger:hover {
-  background-color: rgb(83, 1, 83);
+  background-color: rgb(141, 0, 0);
 }
